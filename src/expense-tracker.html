@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <style>
+        ul li{
+            background-color: #3f3f46;
+            color: white;
+            padding: 6px 10px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        ul li button{
+            border: 2px solid white;    
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #27272a;
+        }
+
+        .hideIt{
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-zinc-800 flex justify-center items-center min-h-screen">
+    <div id="container" class="bg-zinc-700 rounded-lg p-5 grid grid-cols-12 gap-4">
+        <h2 class="col-span-12 text-white text-4xl leading-tight tracking-tight text-center ">Expense Tracker</h2>
+        <form class="col-span-12 grid gap-2 grid-cols-6" id="expenseForm">
+            <input type="text" name="expenseInput" id="expenseInput" placeholder="Enter" class="col-span-3 rounded-lg px-3 py-2 bg-zinc-600 text-white">
+            <input type="number" name="" id="expenseAmount" class="bg-zinc-600 text-white col-span-2 px-3 py-2 rounded-lg" placeholder="enter Amount">
+            <button type="submit" id="submitBtn" class="border-2 border-gray-900 rounded-lg col-span-1 px-3 py-2">Add Expense</button>
+        </form>
+        <ul class="col-span-12 bg-zinc-950 rounded-md p-5" id="expenseList">
+            
+        </ul>
+
+        <div id="totalAmout" class="col-span-12 text-center text-white text-2xl">
+            Total Amount : $0.00
+        </div>
+
+    </div>
+
+    <script src="expense-tracker.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="output.css">
+    <style>
+        ul li{
+            background-color: rgb(34, 33, 33);
+            padding: 10px 30px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        ul li button{
+            border: 2px solid white;
+            padding: 5px 10px;
+            border-radius: 10px;
+            background-color: rgb(234, 55, 55); 
+        }
+
+        .done{
+            text-decoration: line-through;
+            background-color: rgb(58, 54, 54);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex justify-center items-center">
+    <div class="todo bg-gray-700 min-h-52 px-10 py-5 rounded-lg">
+        <h2 class="text-center font-semibold text-3xl mb-5">ToDo List</h2>
+        <div class="grid grid-cols-12 gap-5">
+            <input type="text" name="" id="todo-input" class="col-span-8 text-gray-600 p-3 rounded-md">
+            <button class="bg-purple-700 col-span-4 rounded-md p-2" id="add-task">Add Task in List</button>
+            <ul class="col-span-12" id="todo-list">
+            </ul>
+            <div class="col-span-12 bg-gray-700 text-white" id="status"></div>
+        </div>
+    </div>
+    <script src="to-do.js"></script>    
+</body>
+</html>

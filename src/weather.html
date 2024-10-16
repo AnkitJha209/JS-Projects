@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="output.css">
+    <style>
+        .hideIt{
+            display: none;
+        }
+        .block-mg{
+            display: block;
+        }
+        ul li{
+            background-color: #6b7280;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body class="bg-gray-950 flex justify-center items-center min-h-screen">
+    <div class="bg-gray-700 grid grid-cols-12 text-white px-10 py-5 gap-5 rounded-xl">
+        <div class="text-3xl col-span-12 text-center mb-10">Weather</div>
+        <div id="info" class="col-span-6 grid grid-cols-12 gap-4">
+            <input type="text" name="forCity" h-10 id="input-city" class="bg-gray-500 text-white px-5 py-1 rounded-md col-span-8">
+            <button class="col-span-4 bg-purple-700 rounded-md hover:bg-purple-800" id="searchCity">Search City</button>
+            <ul class="col-span-12 bg-gray-900 p-5 rounded-lg hideIt" id="weatherInfo">
+                <li id="cityName"></li>
+                <li id="temp"></li>
+                <li id="description"></li>
+            </ul>
+            <div id="error-msg" class="col-span-12 hideIt">
+                <span>
+                    Error: Country Not Found!!!!
+                </span>
+            </div>
+        </div>
+        <div id="image-section" class="col-span-6 row-span-2 flex justify-center items-center bg-blue">
+            <img src="" alt="" id="descrip" class="object-cover rounded-md">
+        </div>
+    </div>
+    <script src="weather.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="output.css">
+    <style>
+        ul li{
+            background-color: #1f2937;
+            padding: 5px 10px;
+            border-radius: 10px;
+            color: white;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        ul li:hover{
+            background-color: aliceblue;
+            color: black;
+        }
+
+        .alice{
+            background-color: aliceblue;
+            color: black;
+        }
+
+        .selected{
+            background-color:#1f2937;
+        }
+
+        .hideIt{
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 flex justify-center items-center min-h-screen"> 
+    <div id="mainContainer" class="bg-gray-600 rounded-md p-5 grid grid-cols-12">
+        <h1 class="mb-5 col-span-12 text-3xl text-gray-400 text-center">Quiz App</h1>
+        <div id="question-container" class="col-span-12 hideIt">
+            <div id="question" class="text-white text-xl mb-5"></div>
+            <ul id="choices">
+            </ul>
+        </div>
+        <div id="resultContainer" class="col-span-12 hideIt"></div>
+        <button id="startBtn" class="col-span-12 border-2 rounded-md py-2 hover:bg-gray-800 text-white">Start</button>
+        <button id="restartBtn" class="col-span-12 hideIt border-2 rounded-md py-2 hover:bg-gray-800 text-white">Restart</button>
+        <button id="nextBtn" class="col-span-12 hideIt border-2 rounded-md py-2 hover:bg-gray-800 text-white">Next</button>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
